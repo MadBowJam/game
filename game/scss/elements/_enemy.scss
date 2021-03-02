@@ -1,0 +1,56 @@
+.enemy {
+    @include invis;
+    overflow: hidden;
+    top: 10px;
+    bottom: 112px;
+
+    &_list {
+        height: 80%;
+    }
+
+    &_item {
+        transition: all .5s linear;
+
+        &_name {
+            text-align: center;
+        }
+    }
+
+    @media (max-width:900px) {
+        bottom: 214px;
+
+        &_list {
+            height: 75%;
+        }
+    }
+
+    @media (max-width:900px) {
+        &_item {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-height:700px) {
+        &_list {
+            height: 70%;
+        }
+
+        &_item {
+            font-size: 25px;
+        }
+    }
+}
+
+.fight_buttons, .enemy_buttons {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+}
+
+.fight_buttons {
+    @include invis;
+}
+
+.punch {
+    width: 110px;
+}

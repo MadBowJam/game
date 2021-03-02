@@ -1,0 +1,62 @@
+@mixin clearfix {
+    clear: both;
+    display: table;
+}
+
+@mixin clearfix_c {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+@mixin font ($family, $px, $color) {
+    font-family: $family;
+    font-size: $px;
+    color: $color;
+}
+
+@mixin font_size ($px, $color) {
+    font-size: $px;
+    color: $color;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin hover($name) {
+    @include size(110px, 13px);
+    margin-right: 10px;
+    content: $name;
+    font-weight: bold;
+    background-color: $black2;
+}
+
+@mixin invis {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@mixin respond-to($media) {
+    @if $media == desktop {
+        @media (max-width: $desktop - 1) {
+            @content;
+        }
+    }
+
+    @if $media == tablet {
+        @media (max-width: $tablet - 1) {
+            @content;
+        }
+    }
+}
+
+@mixin min_max ($min, $max) {
+    min-width: $min;
+    max-width: $max;
+}
+
+@function rem($px) {
+    @return ($px / $base_font_size) * 1rem;
+}

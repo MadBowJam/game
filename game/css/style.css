@@ -1,0 +1,1053 @@
+body, h1, h2, h3, h4, h5, h6, ul, li, p, a, img, span, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'YuseiMagic-Regular';
+  src: url("../fonts/YuseiMagic-Regular.eot");
+  src: url("../fonts/YuseiMagic-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/YuseiMagic-Regular.svg#YuseiMagic-Regular") format("svg"), url("../fonts/YuseiMagic-Regular.ttf") format("truetype"), url("../fonts/YuseiMagic-Regular.woff") format("woff"), url("../fonts/YuseiMagic-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.global {
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' %3E%3Cdefs%3E%3ClinearGradient id='a' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2380F'/%3E%3Cstop offset='1' stop-color='%23f40'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpattern id='b' width='24' height='24' patternUnits='userSpaceOnUse'%3E%3Ccircle fill='%23ffffff' cx='12' cy='12' r='12'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' fill='url(%23a)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23b)' fill-opacity='0.1'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+html, body {
+  position: relative;
+  min-width: 320px;
+  min-height: 640px;
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 10px;
+}
+
+.contact {
+  width: 250px;
+  height: 90px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.contact_title {
+  font-family: "YuseiMagic-Regular";
+  font-size: 15.4px;
+  color: #ffecb9;
+  margin: 3px 0 10px 0;
+  text-align: center;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.contact_list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contact_item {
+  width: 50px;
+}
+
+.contact_link {
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.contact_link::before {
+  content: '';
+  clear: both;
+  display: table;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-transform: skewX(45deg) translateX(150px);
+          transform: skewX(45deg) translateX(150px);
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 2;
+}
+
+.contact_link:hover::before {
+  -webkit-transform: skewX(45deg) translateX(-150px);
+          transform: skewX(45deg) translateX(-150px);
+}
+
+.contact_link::after {
+  content: '';
+  clear: both;
+  display: table;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: -1;
+}
+
+.contact_link:hover::after {
+  background: rgba(177, 90, 199, 0.637);
+}
+
+.contact_image {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  -webkit-filter: brightness(10%);
+          filter: brightness(10%);
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .contact {
+    width: 50%;
+    right: 0;
+    border-right: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+  }
+}
+
+.additional_stat {
+  width: 250px;
+  height: 90px;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  bottom: 10px;
+  left: 10px;
+  text-align: center;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+@media (max-width: 900px) {
+  .additional_stat {
+    width: 50%;
+    left: 0;
+    border-left: hidden;
+    border-right: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  .additional_stat {
+    width: 100%;
+  }
+}
+
+.kill_list, .coins_list, .exp_list, .lvl_list {
+  width: 50px;
+}
+
+.kill_title, .coins_title, .exp_title, .lvl_title {
+  font-family: "YuseiMagic-Regular";
+  font-size: 15.4px;
+  color: #ffecb9;
+  margin: 3px 0 10px;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.kill_stat, .coins_stat, .exp_stat, .lvl_stat {
+  font-family: "YuseiMagic-Regular";
+  font-size: 15.4px;
+  color: #ffecb9;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  padding-top: 12px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.exp_stat {
+  padding-top: 1px;
+  line-height: 15px;
+}
+
+.bottom_bar {
+  visibility: hidden;
+  opacity: 0;
+  min-width: 320px;
+  position: absolute;
+  bottom: 10px;
+  left: 272px;
+  right: 272px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.bars {
+  width: 90%;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  overflow: hidden;
+  margin: 0;
+}
+
+.bars_list_currentMax, .bars_list_regen {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.bars_item {
+  width: 100%;
+  height: 30px;
+  color: #ffecb9;
+  padding-top: 6px;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.currentMax {
+  text-align: center;
+}
+
+.regen {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.stamina {
+  background-color: #777474;
+}
+
+.health {
+  background-color: #d62525;
+}
+
+.mana {
+  background-color: #3655b3;
+}
+
+.hero {
+  width: 10%;
+  height: 90px;
+  z-index: 5;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero_list {
+  width: 50%;
+  padding: 3px 10px;
+  line-height: 13px;
+}
+
+.hero_item {
+  font-family: "YuseiMagic-Regular";
+  font-size: 12px;
+  color: #ffecb9;
+  font-weight: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-top: 1px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.hero_face {
+  width: 50%;
+  top: 5px;
+}
+
+.hero_icon {
+  width: 13px;
+  height: 13px;
+  margin-left: 5px;
+}
+
+.damage:hover::before {
+  width: 110px;
+  height: 13px;
+  margin-right: 10px;
+  content: "Damage";
+  font-weight: bold;
+  background-color: #222222;
+}
+
+.armor:hover::before {
+  width: 110px;
+  height: 13px;
+  margin-right: 10px;
+  content: "Armor";
+  font-weight: bold;
+  background-color: #222222;
+}
+
+.morality:hover::before {
+  width: 110px;
+  height: 13px;
+  margin-right: 10px;
+  content: "Morality";
+  font-weight: bold;
+  background-color: #222222;
+}
+
+.strength:hover::before {
+  width: 110px;
+  height: 13px;
+  margin-right: 10px;
+  content: "Strength";
+  font-weight: bold;
+  background-color: #222222;
+}
+
+.agility:hover::before {
+  width: 110px;
+  height: 13px;
+  margin-right: 10px;
+  content: "Agility";
+  font-weight: bold;
+  background-color: #222222;
+}
+
+.intelligence:hover::before {
+  width: 110px;
+  height: 13px;
+  margin-right: 10px;
+  content: "Intelligence";
+  font-weight: bold;
+  background-color: #222222;
+}
+
+@media (max-width: 1650px) {
+  .hero {
+    width: 20%;
+  }
+  .bars {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    width: 35%;
+  }
+  .bars {
+    width: 65%;
+  }
+}
+
+@media (max-width: 900px) {
+  .bottom_bar {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 112px;
+    border-left: hidden;
+    border-right: hidden;
+  }
+  .hero {
+    width: 20%;
+  }
+  .bars {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .hero {
+    width: 35%;
+  }
+  .bars {
+    width: 65%;
+  }
+}
+
+.button {
+  font-family: "YuseiMagic-Regular";
+  font-size: 30px;
+  color: #ffecb9;
+  width: 105px;
+  height: 50px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.button:hover {
+  background-color: rgba(100, 100, 100, 0.9);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.wrapper {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: block;
+  top: 15%;
+  bottom: 112px;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.class_select {
+  width: 300px;
+  height: 375px;
+  margin: 5px auto;
+  text-align: center;
+  padding-top: 10px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.class_select_face {
+  width: 280px;
+  height: 300px;
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    position: absolute;
+    top: 0;
+  }
+  .class_select {
+    width: 100%;
+    height: 27%;
+    margin: 10px;
+  }
+  .class_select_face {
+    width: 100%;
+    height: 65%;
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 850px) {
+  .class_select_face {
+    height: 60%;
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 775px) {
+  .class_select_face {
+    height: 55%;
+  }
+}
+
+@media (max-width: 1000px) and (max-height: 700px) {
+  .class_select_face {
+    height: 50%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .select_button {
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+#class_select4 {
+  display: none;
+}
+
+.hero_lore {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  width: 40%;
+  position: fixed;
+  left: 10px;
+  bottom: 1120px;
+  top: -1000px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  font-family: "YuseiMagic-Regular";
+  font-size: 25px;
+  color: #ffecb9;
+  padding: 10px;
+  text-align: justify;
+  visibility: hidden;
+}
+
+.hero_skills {
+  font-family: "YuseiMagic-Regular";
+  font-size: 25px;
+  color: #ffecb9;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+  width: 40%;
+  position: fixed;
+  right: 10px;
+  bottom: 100%;
+  top: -100%;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  padding: 10px;
+  visibility: hidden;
+}
+
+.hero_skills_title {
+  color: #facb4a;
+  text-align: center;
+}
+
+.hero_skills_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 95%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 10px;
+}
+
+.hero_skills_icon {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.hero_skills_name {
+  color: #facb4a;
+}
+
+.hero_skills_description {
+  font-size: 23px;
+}
+
+.hero_skills_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero_select, .enemy {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -151px;
+  bottom: 112px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.hero_select_list, .enemy_list {
+  width: 300px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.hero_select_item, .enemy_item {
+  font-family: "YuseiMagic-Regular";
+  font-size: 30px;
+  color: #ffecb9;
+  width: 275px;
+  margin: 0 auto;
+}
+
+.hero_select_face, .enemy_face {
+  width: 275px;
+  height: 300px;
+}
+
+@media (max-width: 900px) {
+  .hero_select, .enemy {
+    bottom: 214px;
+  }
+  .hero_select_face, .enemy_face {
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero_select, .enemy {
+    bottom: 214px;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    border-left: hidden;
+    border-right: hidden;
+  }
+  .hero_select_item, .enemy_item {
+    font-size: 22px;
+  }
+  .hero_select_face, .enemy_face {
+    height: 150px;
+  }
+}
+
+@media (max-height: 850px) {
+  .hero_select_face, .enemy_face {
+    height: 125px;
+  }
+}
+
+@media (max-height: 750px) {
+  .hero_select_item, .enemy_item {
+    font-size: 22px;
+  }
+  .hero_select_face, .enemy_face {
+    height: 100px;
+  }
+}
+
+.buttons {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.enemy {
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
+  top: 10px;
+  bottom: 112px;
+}
+
+.enemy_list {
+  height: 80%;
+}
+
+.enemy_item {
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.enemy_item_name {
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .enemy {
+    bottom: 214px;
+  }
+  .enemy_list {
+    height: 75%;
+  }
+}
+
+@media (max-width: 900px) {
+  .enemy_item {
+    font-size: 30px;
+  }
+}
+
+@media (max-height: 700px) {
+  .enemy_list {
+    height: 70%;
+  }
+  .enemy_item {
+    font-size: 25px;
+  }
+}
+
+.fight_buttons, .enemy_buttons {
+  text-align: center;
+  position: absolute;
+  bottom: 10px;
+}
+
+.fight_buttons {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.punch {
+  width: 110px;
+}
+
+.girl {
+  visibility: hidden;
+  opacity: 0;
+  width: 300px;
+  text-align: center;
+  position: absolute;
+  display: block;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.girl_list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.girl_image {
+  width: 300px;
+  height: 325px;
+}
+
+@media (max-width: 500px) {
+  .girl {
+    bottom: 214px;
+    top: 10px;
+  }
+}
+
+@media (max-height: 850px) {
+  .girl {
+    bottom: 214px;
+    top: 10px;
+  }
+}
+
+.forest {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  margin: -107px 0 0 -151px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.forest_list {
+  font-family: "YuseiMagic-Regular";
+  font-size: 25px;
+  color: #ffecb9;
+  text-align: center;
+}
+
+.hero_name {
+  width: 300px;
+  height: 150px;
+  font-family: "YuseiMagic-Regular";
+  font-size: 25px;
+  color: #ffecb9;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -107px 0 0 -151px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  text-align: center;
+}
+
+.hero_name_sugg {
+  width: 300px;
+  height: 145px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  background: rgba(150, 150, 150, 0.8);
+  position: fixed;
+  top: -105%;
+  opacity: 0;
+}
+
+.hero_name_input {
+  width: 280px;
+  height: 30px;
+  font-size: 25px;
+  background-color: rgba(253, 241, 184, 0.774);
+  color: #222222;
+  border-radius: 7px;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.hero_name_input:focus {
+  background-color: rgba(34, 26, 31, 0.774);
+  color: #ffecb9;
+  outline: none;
+}
+
+.real_name {
+  width: 300px;
+  height: 150px;
+  font-family: "YuseiMagic-Regular";
+  font-size: 25px;
+  color: #ffecb9;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -107px 0 0 -151px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  text-align: center;
+}
+
+.forest_reject {
+  width: 300px;
+  height: 180px;
+  font-family: "YuseiMagic-Regular";
+  font-size: 25px;
+  color: #ffecb9;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -90px 0 0 -150px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  text-align: center;
+  background-color: rgba(184, 74, 74, 0.7);
+}
+
+.shop {
+  visibility: hidden;
+  opacity: 0;
+  font-family: "YuseiMagic-Regular";
+  font-size: 20px;
+  color: #ffecb9;
+  width: 300px;
+  text-align: center;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 112px;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.shop_list {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop_item {
+  margin: 0 10px;
+  cursor: pointer;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.shop_item:first-child {
+  cursor: auto;
+  margin: 10px 0 0;
+}
+
+.shop_item:hover {
+  background-color: rgba(100, 100, 100, 0.9);
+}
+
+.shop_item:hover:first-child {
+  background-color: unset;
+}
+
+.shop_item:hover:last-child {
+  cursor: auto;
+  background-color: unset;
+}
+
+.shop_image {
+  width: 300px;
+  height: 250px;
+}
+
+.shop_button {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .shop {
+    bottom: 214px;
+  }
+}
+
+@media (max-height: 850px) {
+  .shop {
+    font-size: 15px;
+  }
+  .shop_image {
+    width: 300px;
+    height: 100px;
+  }
+}
+
+.alert {
+  visibility: hidden;
+  opacity: 0;
+  font-family: "YuseiMagic-Regular";
+  font-size: 30px;
+  color: #ffecb9;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(7px) grayscale(1);
+          backdrop-filter: blur(7px) grayscale(1);
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  z-index: 10;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.checkbox_button {
+  display: none;
+}
+
+.checkbox_button:checked + .checkbox_label {
+  background-color: #66b17f;
+}
+
+.checkbox_label {
+  font-family: "YuseiMagic-Regular";
+  font-size: 16px;
+  color: #ffecb9;
+  width: 50px;
+  height: 50px;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #aa6183;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  cursor: pointer;
+}
+
+.restart {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.restart:hover > .restart_image {
+  -webkit-transform: rotate(450deg);
+          transform: rotate(450deg);
+  -webkit-filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+          filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.restart_image {
+  margin: 5px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-filter: invert(100%) sepia(51%) saturate(2878%) hue-rotate(275deg) brightness(104%) contrast(97%);
+          filter: invert(100%) sepia(51%) saturate(2878%) hue-rotate(275deg) brightness(104%) contrast(97%);
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}

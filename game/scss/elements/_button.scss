@@ -1,0 +1,16 @@
+.button {
+    @include font ('YuseiMagic-Regular', 30px, $white2);
+    @include size (105px, 50px);
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all .5s linear;
+
+    &:hover {
+        background-color: rgba(100, 100, 100, 0.9);;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

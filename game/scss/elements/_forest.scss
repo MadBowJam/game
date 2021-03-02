@@ -1,0 +1,15 @@
+.forest {
+    @include invis;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    margin: -107px 0 0 -151px;
+    // z-index: 5;
+    transition: all 1s linear;
+
+    &_list {
+        @include font ('YuseiMagic-Regular', 25px, $white2);
+        text-align: center;
+    }
+}

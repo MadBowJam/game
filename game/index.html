@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+    <script src="js/1226.js"></script>
+    <script src="js/1229.js"></script>
+    <script src="js/array.js"></script>
+    <script src="js/object.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="global">
+        <div class="wrapper" id="wrapper" style="visibility:visible">
+            <div class="class_select glass" id="class_select1">
+                <img src="img/knight.svg" alt="" class="class_select_face">
+                <button class="select_button button glass" id="class_select_button1">Knight</button>
+            </div>
+            <div class="class_select glass" id="class_select2">
+                <img src="img/archer.svg" alt="" class="class_select_face">
+                <button class="select_button button glass" id="class_select_button2">Archer</button>
+            </div>
+            <div class="class_select glass" id="class_select3">
+                <img src="img/mage.svg" alt="" class="class_select_face">
+                <button class="select_button button glass" id="class_select_button3">Mage</button>
+            </div>
+            <div class="class_select glass" id="class_select4">
+                <img src="img/nina.svg" alt="" class="class_select_face">
+                <button class="select_button button glass" id="class_select_button4">Nina</button>
+            </div>
+        </div>
+
+        <div class="hero_select glass" id="hero_select">
+            <ul class="hero_select_list">
+                <li class="hero_select_item"><img src="img/knight.svg" alt="" class="hero_select_face" id="hero_select_face"></li>
+                <li class="hero_select_item" id="hero_select_item_class">Class</li>
+                <li class="hero_select_item" id="hero_select_item_hp">HP</li>
+                <li class="hero_select_item" id="hero_select_item_damage">Damage</li>
+                <li class="hero_select_item" id="hero_select_item_morality">Morality</li>
+                <li class="hero_select_item" id="hero_select_item_strength">Strength</li>
+                <li class="hero_select_item" id="hero_select_item_agility">Agility</li>
+                <li class="hero_select_item" id="hero_select_item_intelligence">Intelligence</li>
+                <li class="hero_select_item buttons"><button class="hero_back_button button glass" id="hero_back_button">Back</button><button class="hero_select_button button glass" id="hero_select_button">Select</button></li>
+            </ul>
+        </div>
+
+        <div class="hero_name glass" id="hero_name">
+            <h3 class="hero_name_title">Enter name:</h3>
+            <div class="hero_name_sugg glass" id="hero_name_suggestion">Only english letters, numbers and '_' are allowed, length between 3 and 15</div>
+            <input type="text" class="hero_name_input" name="myField" id="input" placeholder="Only english letters" maxlength="15" onkeyup=globalFunctions.changeInput(this.value)>
+            <button class="hero_name_button button glass" id="hero_name_button">Submit</button>
+        </div>
+
+        <div class="forest glass" id="forest">
+            <ul class="forest_list" id="forest_list">
+                <li class="forest_item" id="forest_item"><h3 class="forest_title" id="forest_title">Visit forest ?</h3></li>
+                <li class="forest_item" id="forest_item"><button class="forest_back button glass" id="forest_back">Back</button><button class="forest_forward button glass" id="forest_forward">GO</button></li>
+            </ul>
+        </div>
+        <div class="enemy glass" id="enemy">
+            <ul class="enemy_list">
+                <li class="enemy_item"><img src="img/knight.svg" alt="" class="enemy_face" id="enemy_face"></li>
+                <li class="enemy_item enemy_item_name" id="enemy_item_name">Name</li>
+                <li class="enemy_item" id="enemy_item_class">Class</li>
+                <li class="enemy_item" id="enemy_item_hp">HP</li>
+                <li class="enemy_item" id="enemy_item_damage">Damage</li>
+                <li class="enemy_item enemy_buttons" id="enemy_buttons"><button class="enemy_back_button button glass" id="enemy_back_button">Run</button><button class="enemy_select_button button glass" id="enemy_select_button">Fight</button></li>
+                <li class="enemy_item fight_buttons" id="fight_buttons">
+                    <h3 class="fight_title">Punch:</h3>
+                    <button class="default_hit punch button glass" id="default_punch_button">Default</button><button class="strong_hit punch button glass" id="strong_punch_button">Strong</button>
+                </li>
+            </ul>
+        </div>
+
+        <div class="girl glass" id="girl">
+            <ul class="girl_list" id="girl_list">
+                <li class="girl_item" id="girl_item"><img src="img/girl.svg" class="girl_image" alt=""></li>
+                <li class="girl_item" id="girl_item"><button class="girl_back button glass" id="girl_back">Back</button><button class="girl_forward button glass" id="girl_forward">GO</button></li>
+            </ul>
+        </div>
+
+        <div class="hero_lore glass" id="hero_lore">
+            <p>Lorem ipsum dolor sit ametnihil quod magni quo ab officia perferendis eligendi sed vero ex ratione molestiae provident est aspernatur dignissimos excepturi, reiciendis ipsa laboriosam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod similique earum, tenetur quis id minima natus rerum iusto ad illo, nostrum tempore odit! Eveniet quod illo doloribus at tempora libero? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet dolorum corrupti doloremque, iste nihil vitae veritatis reprehenderit repudiandae, impedit asperiores tempore suscipit fugiat. Similique, labore. Quod ullam nesciunt nobis dicta! Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel officia fuga earum harum, molestiae maiores illum consequuntur quo facere ex cumque ipsum aspernatur recusandae ipsam magni nihil exercitationem. Quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus provident molestias animi beatae quae, laboriosam nemo odio rerum. Veniam in eveniet inventore porro, accusamus eaque. Nisi nemo omnis alias reiciendis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus vel corrupti, repellat earum similique vero aperiam maiores adipisci soluta in quia eveniet sequi, autem odio voluptates odit quasi hic eius?</p>
+        </div>
+
+        <div class="hero_skills glass" id="hero_skills">
+            <h3 class="hero_skills_title">Skills:</h3>
+            <ul class="hero_skills_list">
+                <li class="hero_skills_item glass"><img src="img/telegram.svg" alt="" class="hero_skills_icon glass" id="hero_skills_icon"><p class="hero_skills_description"><span class="hero_skills_name">FireBall</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus earum et iste consequuntur in nemo ipsa deleniti iusto. Aperiam voluptatum consectetur sint numquam molestias recusandae aliquid maxime perspiciatis accusantium iusto?</p></li>
+                <li class="hero_skills_item glass"><img src="img/telegram.svg" alt="" class="hero_skills_icon glass" id="hero_skills_icon"><p class="hero_skills_description"><span class="hero_skills_name">FireBall</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus earum et iste consequuntur in nemo ipsa deleniti iusto. Aperiam voluptatum consectetur sint numquam molestias recusandae aliquid maxime perspiciatis accusantium iusto?</p></li>
+                <li class="hero_skills_item glass"><img src="img/telegram.svg" alt="" class="hero_skills_icon glass" id="hero_skills_icon"><p class="hero_skills_description"><span class="hero_skills_name">FireBall</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus earum et iste consequuntur in nemo ipsa deleniti iusto. Aperiam voluptatum consectetur sint numquam molestias recusandae aliquid maxime perspiciatis accusantium iusto?</p></li>
+                <li class="hero_skills_item glass"><img src="img/telegram.svg" alt="" class="hero_skills_icon glass" id="hero_skills_icon"><p class="hero_skills_description"><span class="hero_skills_name">FireBall</span><br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus earum et iste consequuntur in nemo ipsa deleniti iusto. Aperiam voluptatum consectetur sint numquam molestias recusandae aliquid maxime perspiciatis accusantium iusto?</p></li>
+            </ul>
+        </div>
+
+        <div class="additional_stat glass" id="additional_stat">
+            <ul class="kill_list">
+                <li class="kill_title">Kills</li>
+                <li class="kill_stat glass" id="kill_stat">Kills</li>
+            </ul>
+            <ul class="coins_list">
+                <li class="coins_title">Coins</li>
+                <li class="coins_stat glass" id="coins_stat">Coins</li>
+            </ul>
+            <ul class="exp_list">
+                <li class="exp_title">EXP</li>
+                <li class="exp_stat glass" id="exp_stat">EXP</li>
+            </ul>
+            <ul class="lvl_list">
+                <li class="lvl_title">LVL</li>
+                <li class="lvl_stat glass" id="lvl_stat">LVL</li>
+            </ul>
+        </div>
+
+        <div class="bottom_bar glass" id="bottom_bar">
+            <div class="hero ">
+                <img src="img/knight.svg" alt="" class="hero_face" id="hero_face">
+                <ul class="hero_list">
+                    <li class="hero_item damage"><h3 id="hero_item_damage">damage</h3><img src="img/sword.svg" alt="" class="hero_icon hero_icon_sword" id="hero_damage"></li>
+                    <li class="hero_item armor"><h3 id="hero_item_armor">armor</h3><img src="img/shield.svg" alt="" class="hero_icon hero_icon_shield" id="hero_armor"></li>
+                    <li class="hero_item morality"><h3 id="hero_item_morality">morality</h3><img src="img/morality.svg" alt="" class="hero_icon hero_icon_morality" id="hero_morality"></li>
+                    <li class="hero_item strength"><h3 id="hero_item_strength">strength</h3><img src="img/strength.svg" alt="" class="hero_icon hero_icon_strength" id="hero_strength"></li>
+                    <li class="hero_item agility"><h3 id="hero_item_agility">strength</h3><img src="img/agility.svg" alt="" class="hero_icon hero_icon_agility" id="hero_agility"></li>
+                    <li class="hero_item intelligence"><h3 id="hero_item_intelligence">intelligence</h3><img src="img/intelligence.svg" alt="" class="hero_icon hero_icon_intelligence" id="hero_intelligence"></li>
+                </ul>
+            </div>
+            <div class="bars ">
+                <ul class="bars_list">
+                    <li class="bars_item stamina" id="stamina_bar">Stamina</li>
+                    <li class="bars_item health" id="health_bar">Health</li>
+                    <li class="bars_item mana" id="mana_bar">Mana</li>
+                </ul>
+                <ul class="bars_list_currentMax">
+                    <li class="bars_item currentMax count" id="stamina_currentMax">Stamina</li>
+                    <li class="bars_item currentMax" id="health_currentMax">Health</li>
+                    <li class="bars_item currentMax" id="mana_currentMax">Mana</li>
+                </ul>
+                <ul class="bars_list_regen">
+                    <li class="bars_item regen" id="stamina_regen">Stamina</li>
+                    <li class="bars_item regen" id="health_regen">Health</li>
+                    <li class="bars_item regen" id="mana_regen">Mana</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="alert_wrapper">
+            <p class="alert" id="alert">alert</p>
+        </div> -->
+
+        <div class="shop glass" id="shop">
+            <ul class="shop_list">
+                <li class="shop_item"><img src="img/shop.svg" alt="" class="shop_image"></li>
+                <li class="shop_item glass" id="shop_item1">+1 damage<br>10 coins</li>
+                <li class="shop_item glass" id="shop_item2">Random increase max health from 10 to 30<br>20 coins</li>
+                <!-- <li class="shop_item glass" id="shop_item3">Restore 100hp<br>30 coins</li> -->
+                <li class="shop_item glass" id="shop_item4">Restore all hp<br>100 coins</li>
+                <li class="shop_item"><button class="shop_button button glass" id="shop_button">Move on</button></li>
+            </ul>
+        </div>
+
+        <div class="restart glass" id="restart"><img src="img/restart.svg" alt="" class="restart_image" id="restart_image"></div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="checkbox" class="checkbox_button">
+            <label for="checkbox" class="checkbox_label glass" id="label">Auto<br>Fight</label>
+        </div>
+
+
+
+        <div class="contact glass" id="contact">
+            <h3 class="contact_title">Contact me for suggestions:</h3>
+            <ul class="contact_list">
+                <li class="contact_item">
+                    <a href="https://t.me/MadBowJam" class="contact_link glass"><img src="img/telegram.svg" alt="" class="contact_image">telegram</a>
+                </li>
+                <li class="contact_item">
+                    <a href="https://www.instagram.com/madbowjam/" class="contact_link glass"><img src="img/instagram.svg" alt="" class="contact_image">instagram</a>
+                </li>
+                <li class="contact_item">
+                    <a href="https://steamcommunity.com/id/MadBowJam/" class="contact_link glass"><img src="img/steam.svg" alt="" class="contact_image">steam</a>
+                </li>
+                <li class="contact_item">
+                    <a href="mailto:madbowjam@gmail.com" class="contact_link glass"><img src="img/email.svg" alt="" class="contact_image">email</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="alert_wrapper">
+            <p class="alert" id="alert">alert</p>
+        </div>
+    </div>
+
+
+
+    <script src="js/mygame.js"></script>
+</body>
+
+</html>

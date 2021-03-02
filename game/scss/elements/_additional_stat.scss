@@ -1,0 +1,47 @@
+.additional_stat {
+    @include size (250px, 90px);
+    @include invis;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    bottom: 10px;
+    left: 10px;
+    text-align: center;
+    transition: all 1s linear;
+
+    @media (max-width:900px) {
+        width: 50%;
+        left: 0;
+        border-left: hidden;
+        border-right: hidden;
+    }
+
+    @media (max-width:500px) {
+        width: 100%;
+    }
+}
+
+.kill_list, .coins_list, .exp_list, .lvl_list {
+    width: 50px;
+}
+
+.kill_title, .coins_title, .exp_title, .lvl_title {
+    @include font ('YuseiMagic-Regular', 15.4px, $white2);
+    margin: 3px 0 10px;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.kill_stat, .coins_stat, .exp_stat, .lvl_stat {
+    @include font ('YuseiMagic-Regular', 15.4px, $white2);
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 12px;
+    transition: all 1s linear;
+}
+
+.exp_stat {
+    padding-top: 1px;
+    line-height: 15px;
+}
