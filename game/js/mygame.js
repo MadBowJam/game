@@ -229,7 +229,7 @@ globalFunctions = {
     run: function() {
         confirmWindow = false;
         globalFunctions.blockButton(enemyBackButton, enemySelectButton);
-        game.action();
+        fight.action();
     },
     //! enemy fight button
     forward: function() {
