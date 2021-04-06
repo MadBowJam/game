@@ -104,7 +104,8 @@ window.onload = function(){
                 hero.character1[arguments[i]] = savedGame.character1[arguments[i]];
             }
         }
-        heroFace.src = `img/${hero.character1.Class}.svg`;
+        lowerCase = hero.character1.Class.toLowerCase();
+        heroFace.src = `img/${lowerCase}.svg`;
         globalFunctions.hiddenContent(heroSelectWrapper, girlInForest, shopWindow);
         globalFunctions.visibleContent(forestDialogWindow, additionalStatistics, bottomBar, label);
         globalFunctions.bottomStats();
