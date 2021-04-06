@@ -1,0 +1,36 @@
+@import "global/reset";
+@import "global/font";
+@import "global/var";
+@import "global/mixins";
+@import "global/global";
+@import "global/glass";
+@import "global/contact";
+@import "elements/additional_stat";
+@import "elements/bars";
+@import "elements/button";
+@import "elements/wrapper";
+@import "elements/hero_lore";
+@import "elements/skills_description";
+@import "elements/hero_select";
+@import "elements/enemy";
+@import "elements/girl";
+@import "elements/forest";
+@import "elements/hero_name";
+@import "elements/real_name";
+@import "elements/forest_reject";
+@import "elements/shop";
+@import "elements/alert";
+@import "elements/checkbox";
+@import "elements/restart";
+
+// body {
+//     background: url(../img/forest.svg);
+//     // z-index: -1;
+//     // backdrop-filter: brightness(50%)  saturate(50%);;
+    
+
+//     @media (max-width: 1000px) {
+//         background-size: cover;
+//     }
+// }
+

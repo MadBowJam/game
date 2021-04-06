@@ -1,0 +1,39 @@
+.hero_name {
+    @include size (300px, 150px);
+    @include font ('YuseiMagic-Regular', 25px, $white2);
+    @include invis;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -107px 0 0 -151px;
+    transition: all 1s linear;
+    text-align: center;
+
+    &_sugg {
+        @include size(300px, 145px);
+        transition: all 1s linear;
+        background: rgba(150, 150, 150, 0.8);
+        position: fixed;
+        top: -105%;
+        opacity: 0;
+    }
+
+    &_input {
+        @include size (280px, 30px);
+        font-size: 25px;
+        background-color: rgba(253, 241, 184, 0.774);
+        color: $black2;
+        border-radius: 7px;
+        transition: all .5s linear;
+
+        &:focus {
+            background-color: rgba(34, 26, 31, 0.774);
+            color: $white2;
+            outline: none;
+        }
+    }
+
+    @media (max-width:1000px) {
+        
+    }
+}

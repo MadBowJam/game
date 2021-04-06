@@ -1,0 +1,34 @@
+.girl {
+    @include invis;
+    // @include size(300px, 400px);
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    display: block;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: all 1s linear;
+
+    &_list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &_image {
+        @include size(300px, 325px);
+    }
+
+    @media (max-width: 500px) {
+        bottom: 214px;
+        top: 10px;
+    }
+
+    @media (max-height: 850px) {
+        bottom: 214px;
+        top: 10px;
+    }
+}

@@ -1,0 +1,44 @@
+.hero_skills {
+    @include font ('YuseiMagic-Regular', 25px, $white2);
+    @include invis;
+    display: none;
+    width: 40%;
+    position: fixed;
+    right: 10px;
+    bottom: 100%;
+    top: -100%;
+    transition: all 1s linear;
+    padding: 10px;
+    visibility: hidden;
+
+    &_title {
+        color: #facb4a;
+        text-align: center;
+    }
+
+    &_list {
+        display: flex;
+        height: 95%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    &_icon {
+        @include size(50px, 50px);
+        padding: 5px;
+        margin: 10px;
+    }
+
+    &_name {
+        color: #facb4a;
+    }
+
+    &_description {
+        font-size: 23px;
+    }
+
+    &_item {
+        display: flex;
+    }
+}
